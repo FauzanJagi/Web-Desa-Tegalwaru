@@ -1,15 +1,4 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 export default function Pemerintahan() {
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-    });
-  }, []);
-
   const kepalaDesa = {
     nama: "SUHIM SETIAWAN",
     jabatan: "Kepala Desa",
@@ -17,12 +6,12 @@ export default function Pemerintahan() {
 
   const bamusdes = {
     nama: "ASUY SUTIJAH",
-    jabatan: "BADAN MUSYAWARATAN DESA",
+    jabatan: "Badan Musyawarah Desa",
   };
 
   const sekretaris = {
     nama: "CECEP AHMAD",
-    jabatan: "SEKRETARIS DESA",
+    jabatan: "Sekretaris Desa",
   };
 
   const perangkatDesa = [
@@ -35,101 +24,86 @@ export default function Pemerintahan() {
   ];
 
   const kepalaDusun = [
-    { nama: "UGUN GUNAWAN", jabatan: "Dusun I" },
-    { nama: "AHMAD SAEP.K", jabatan: "Dusun II" },
-    { nama: "SUPYAN SURI", jabatan: "Dusun III" },
+    { nama: "UGUN GUNAWAN", jabatan: "Kepala Dusun I" },
+    { nama: "AHMAD SAEP.K", jabatan: "Kepala Dusun II" },
+    { nama: "SUPYAN SURI", jabatan: "Kepala Dusun III" },
   ];
 
-  const Card = ({ nama, jabatan, variant = "default", aos }) => {
-    let style = "";
+  const Card = ({ nama, jabatan, variant = "default" }) => {
+    const base =
+      "rounded-xl text-center transition shadow hover:shadow-lg";
 
-    if (variant === "kepala") {
-      style = "bg-green-700 text-white shadow-lg hover:bg-green-800";
-
-    } else if (variant === "bamusdes") {
-      style =
-        "bg-green-500 border-green-500 text-green-900 shadow-md hover:bg-green-600";
-    
-    } else if (variant === "sekretaris") {
-      style =
-        "bg-green-300 border-green-300 text-green-900 shadow-md hover:bg-green-400";
-    } else {
-      style =
-        "bg-white border border-green-200 text-gray-800 shadow-sm hover:shadow-lg hover:scale-105";
-    }
+    const style = {
+      kepala:
+        "bg-green-700 text-white px-10 py-6 text-lg",
+      pimpinan:
+        "bg-green-100 text-green-900 px-6 py-4",
+      default:
+        "bg-white border border-green-200 px-5 py-4",
+    };
 
     return (
       <div
-        data-aos={aos}
-        className={`${style} rounded-xl px-6 py-4 text-center w-full max-w-xs transition duration-300`}
+        data-aos="fade-up"
+        className={`${base} ${style[variant]}`}
       >
-        <h3 className="text-lg font-bold">{nama}</h3>
-        <p className="text-sm opacity-90">{jabatan}</p>
+        <h3 className="font-bold">{nama}</h3>
+        <p className="text-sm mt-1">{jabatan}</p>
       </div>
     );
   };
 
-  const Section = ({ title, children, aos }) => (
-    <div className="mb-16" data-aos={aos}>
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-semibold text-green-700">{title}</h2>
-        <div className="w-20 h-1 bg-green-500 mx-auto mt-2 rounded"></div>
-      </div>
-      {children}
-    </div>
-  );
-
   return (
     <div className="bg-gray-50 py-16">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Judul Halaman */}
-        <div className="text-center mb-16" data-aos="fade-down">
+
+        {/* JUDUL */}
+        <div className="text-center mb-20" data-aos="fade-down">
           <h1 className="text-3xl md:text-4xl font-extrabold text-green-800">
             Struktur Organisasi Pemerintah Desa
           </h1>
-          <p className="text-gray-600 mt-2 text-lg">
-            Pemerintah Desa Tegalwaru
+          <p className="text-gray-600 mt-2">
+            Desa Tegalwaru
           </p>
         </div>
 
-        {/* Kepala Desa */}
-        <Section title="Kepala Desa" aos="fade-up">
-          <div className="flex justify-center">
-            <Card {...kepalaDesa} variant="kepala" aos="zoom-in" />
-          </div>
-        </Section>
+        {/* KEPALA DESA */}
+        <div className="flex justify-center mb-14">
+          <Card {...kepalaDesa} variant="kepala" />
+        </div>
 
-         {/* Bamusdes */}
-        <Section title="Badan musyawaratan Desa" aos="fade-up">
-          <div className="flex justify-center">
-            <Card {...bamusdes} variant="bamusdes" aos="zoom-in" />
-          </div>
-        </Section>
+        {/* GARIS */}
+        <div className="w-px h-10 bg-green-400 mx-auto mb-10"></div>
 
-        {/* Sekretaris Desa */}
-        <Section title="Sekretaris Desa" aos="fade-up">
-          <div className="flex justify-center">
-            <Card {...sekretaris} variant="sekretaris" aos="zoom-in" />
-          </div>
-        </Section>
+        {/* BAMUSDES & SEKDES */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto mb-20">
+          <Card {...bamusdes} variant="pimpinan" />
+          <Card {...sekretaris} variant="pimpinan" />
+        </div>
 
-        {/* Perangkat Desa */}
-        <Section title="Perangkat Desa" aos="fade-up">
-          <div className="flex flex-wrap justify-center gap-6">
-            {perangkatDesa.map((orang, i) => (
-              <Card key={i} {...orang} aos="fade-up" />
+        {/* PERANGKAT DESA */}
+        <div className="mb-20">
+          <h2 className="section-title text-center">
+            Perangkat Desa
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+            {perangkatDesa.map((p, i) => (
+              <Card key={i} {...p} />
             ))}
           </div>
-        </Section>
+        </div>
 
-        {/* Kepala Dusun */}
-        <Section title="Kepala Dusun" aos="fade-up">
-          <div className="flex flex-wrap justify-center gap-6">
-            {kepalaDusun.map((orang, i) => (
-              <Card key={i} {...orang} aos="fade-up" />
+        {/* KEPALA DUSUN */}
+        <div>
+          <h2 className="section-title text-center">
+            Kepala Dusun
+          </h2>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+            {kepalaDusun.map((d, i) => (
+              <Card key={i} {...d} />
             ))}
           </div>
-        </Section>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function Umkm() {
         {/* Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 leading-snug">
-            Loser Beton <span className="text-green-600">"URI"</span>
+            Roster Beton <span className="text-green-600"></span>
           </h1>
 
           <p className="text-gray-700 text-base sm:text-lg">
@@ -20,7 +20,7 @@ export default function Umkm() {
 
           <div className="space-y-1 text-gray-600 text-sm sm:text-base">
             <p>
-              <strong>Pemilik:</strong> nanang
+              <strong>Pemilik:</strong> Nanang
             </p>
             <p>
               <strong>Alamat:</strong> Desa Tegalwaru, Kec. Tegalwaru, Kabupaten Purwakarta RT.13/RW.02

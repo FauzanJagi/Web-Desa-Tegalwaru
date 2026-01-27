@@ -113,7 +113,7 @@ export default function BerandaHero() {
             <div className="relative pb-[56.25%]">
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com"
+                src="https://www.youtube.com/embed/nkQENV96s4Q"
                 title="Video Profil Desa Tegalwaru"
                 allowFullScreen
               ></iframe>
