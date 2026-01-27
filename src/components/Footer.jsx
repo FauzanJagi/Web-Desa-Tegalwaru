@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <a href="/">
             <img
-              src="/images/tegalwaru-logo.png"
+              src="/images/Tegalwaru-logo.png"
               alt="Logo Desa Tegalwaru"
               className="w-10 h-10 object-contain"
             />
@@ -22,7 +22,7 @@ export default function Footer() {
 
           <a href="https://www.instagram.com/kkn.tegalwaru2026/">
             <img
-              src="/images/kkn-tegalwaru-logo.png"
+              src="/images/Kkn-Tegalwaru-logo.png"
               alt="Logo KKN Tegalwaru"
               className="w-12 h-12 object-contain"
             />

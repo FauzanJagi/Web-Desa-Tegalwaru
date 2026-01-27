@@ -129,14 +129,6 @@ export default function DataDesa() {
           </ul>
         </Card>
 
-        {/* LEMBAGA */}
-        <Card title="🏛️ Lembaga Desa">
-          <ul className="list-disc ml-5 text-sm">
-            <li>RT: 13</li>
-            <li>RW: 5</li>
-          </ul>
-        </Card>
-
       </div>
     </div>
   );

@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom"; // ← tambahkan useLocation
-import TegalwaruLogo from "../../public/images/Tegalwaru-Logo.png";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // ← ambil lokasi saat ini
+  const location = useLocation();
   const currentPath = location.pathname;
 
   const menuItems = [
@@ -21,9 +20,13 @@ export default function Navbar() {
     <nav className="sticky top-0 w-full bg-white/90 backdrop-blur-lg shadow-sm z-50">
       <div className="px-10 py-4 flex items-center w-full justify-between">
         {/* Logo */}
-        <Link to="/">
+        <Link to="/" onClick={() => setIsOpen(false)}>
           <div className="flex items-center gap-3">
-            <img src={TegalwaruLogo} alt="Tegalwaru Logo" className="h-10" />
+            <img
+              src="/images/Tegalwaru-logo.png"
+              alt="Logo Desa Tegalwaru"
+              className="h-10 w-auto object-contain"
+            />
             <span className="text-xl font-semibold text-gray-800">
               Desa Tegalwaru
             </span>
@@ -58,10 +61,11 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Hamburger Button (Mobile Only) */}
+        {/* Hamburger Button (Mobile) */}
         <button
           className="lg:hidden text-gray-800"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -78,12 +82,12 @@ export default function Navbar() {
                 <Link
                   key={index}
                   to={menu.path}
+                  onClick={() => setIsOpen(false)}
                   className={`transition ${
                     isActive
                       ? "text-green-700 font-semibold"
                       : "text-gray-700 hover:text-gray-900"
                   }`}
-                  onClick={() => setIsOpen(false)}
                 >
                   {menu.label}
                 </Link>
