@@ -1,0 +1,157 @@
+import KantorDesa from "../../public/images/Kantor-Desa.jpeg";
+import KepalaDesa from "../../public/images/Kepala-Desa.jpeg";
+import { ReactTyped } from "react-typed";
+
+export default function BerandaHero() {
+  return (
+    <>
+      {/* ================= IDENTITAS DESA ================= */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background visual */}
+        <div className="absolute inset-0">
+          <img
+            src={KantorDesa}
+            alt="Desa Tegalwaru"
+            className="w-full h-full object-cover scale-110 blur-[1px]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/95 via-green-800/85 to-black/70" />
+        </div>
+
+        {/* Ornamen */}
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-green-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-green-700/20 rounded-full blur-3xl" />
+
+        {/* Konten */}
+        <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="inline-block mb-6 px-6 py-2 rounded-full bg-white/15 backdrop-blur text-white text-sm tracking-wide">
+              Website Resmi Pemerintah Desa
+            </span>
+
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+              Desa Tegalwaru
+            </h1>
+
+            <p className="mt-4 text-xl md:text-2xl text-white/90 font-light">
+              <ReactTyped
+                strings={[
+                  "Harmoni Alam dan Pemerintahan Digital",
+                  "Desa Modern, Transparan, dan Melayani",
+                ]}
+                typeSpeed={45}
+                backSpeed={25}
+                backDelay={2500}
+                loop
+                showCursor={false}
+              />
+            </p>
+
+            <p className="mt-8 text-white/80 max-w-xl leading-relaxed">
+              Desa Tegalwaru merupakan bagian dari Kecamatan Tegalwaru,
+              Kabupaten Purwakarta, yang berkomitmen menghadirkan pelayanan
+              publik berbasis digital dengan tetap menjaga nilai budaya dan
+              kearifan lokal.
+            </p>
+          </div>
+
+          {/* Panel visual kanan */}
+          <div className="hidden md:block">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+              <p className="text-white text-lg font-semibold mb-2">
+                Identitas Wilayah
+              </p>
+              <p className="text-white/80">
+                Kecamatan Tegalwaru <br />
+                Kabupaten Purwakarta <br />
+                Provinsi Jawa Barat
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= DESA DALAM ANGKA ================= */}
+      <section className="relative z-20 -mt-24 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {[
+            { label: "Luas Wilayah", value: "253", unit: "Ha" },
+            { label: "Jumlah Penduduk", value: "3.282", unit: "Jiwa" },
+            { label: "Jumlah Keluarga", value: "1108", unit: "KK" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-3xl p-8 text-center shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <p className="text-gray-500 text-lg">{item.label}</p>
+              <h2 className="text-4xl font-extrabold text-green-800 mt-3">
+                {item.value}
+              </h2>
+              <span className="text-gray-400">{item.unit}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= VIDEO PROFIL (HIGHLIGHT) ================= */}
+      <section className="py-28 px-4 bg-gradient-to-b from-white to-green-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 className="text-4xl font-extrabold text-green-800 mb-6">
+              Video Profil Desa
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Saksikan gambaran singkat tentang kehidupan masyarakat,
+              pemerintahan, serta potensi Desa Tegalwaru melalui video profil
+              resmi berikut.
+            </p>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="absolute top-4 left-4 z-10 bg-green-700 text-white px-4 py-1 rounded-full text-sm">
+              Video Resmi
+            </div>
+            <div className="relative pb-[56.25%]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com"
+                title="Video Profil Desa Tegalwaru"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= PROFIL KEPALA DESA ================= */}
+      <section className="py-28 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+          <img
+            src={KepalaDesa}
+            alt="Kepala Desa"
+            className="w-full max-w-md mx-auto rounded-3xl shadow-2xl object-cover"
+          />
+
+          <div>
+            <h2 className="text-4xl font-extrabold text-green-800 mb-4">
+              Sambutan Kepala Desa
+            </h2>
+            <h3 className="text-2xl font-semibold text-green-700 mb-6">
+              Suhim Setiawan
+            </h3>
+
+            <blockquote className="border-l-4 border-green-600 pl-6 text-gray-700 text-lg leading-relaxed italic">
+              “Website Desa Tegalwaru kami hadirkan sebagai bentuk komitmen
+              terhadap transparansi, pelayanan publik, dan keterbukaan
+              informasi. Semoga menjadi media yang bermanfaat bagi seluruh
+              masyarakat.”
+            </blockquote>
+
+            <p className="mt-6 font-semibold text-green-800">
+              — Kepala Desa Tegalwaru
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
