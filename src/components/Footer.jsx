@@ -1,7 +1,3 @@
-import unsikalogo from "../../public/images/unsika-logo.png";
-import TegalwaruLogo from "../../public/images/Tegalwaru-logo.png";
-import KknTegalwarulogo from "../../public/images/kkn-Tegalwaru-logo.png";
-
 export default function Footer() {
   return (
     <footer className="bg-green-800 text-gray-200 py-6">
@@ -10,7 +6,7 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <a href="/">
             <img
-              src={TegalwaruLogo}
+              src="/images/tegalwaru-logo.png"
               alt="Logo Desa Tegalwaru"
               className="w-10 h-10 object-contain"
             />
@@ -18,7 +14,7 @@ export default function Footer() {
 
           <a href="https://www.unsika.ac.id/">
             <img
-              src={unsikalogo}
+              src="/images/unsika-logo.png"
               alt="Logo UNSIKA"
               className="w-10 h-10 object-contain"
             />
@@ -26,7 +22,7 @@ export default function Footer() {
 
           <a href="https://www.instagram.com/kkn.tegalwaru2026/">
             <img
-              src={KknTegalwarulogo}
+              src="/images/kkn-tegalwaru-logo.png"
               alt="Logo KKN Tegalwaru"
               className="w-12 h-12 object-contain"
             />
@@ -37,7 +33,7 @@ export default function Footer() {
         <div className="text-center sm:text-right">
           <p className="text-sm md:text-base">
             KKN UNSIKA 2025 &mdash; Desa Tegalwaru, Kecamatan Tegalwaru,
-            Kabupaten Puwakarta
+            Kabupaten Purwakarta
           </p>
           <p className="text-xs text-gray-400">
             &copy; {new Date().getFullYear()} KKN Universitas Singaperbangsa
