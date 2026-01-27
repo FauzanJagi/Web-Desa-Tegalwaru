@@ -32,7 +32,7 @@ export default function Footer() {
         {/* Text Section */}
         <div className="text-center sm:text-right">
           <p className="text-sm md:text-base">
-            KKN UNSIKA 2025 &mdash; Desa Tegalwaru, Kecamatan Tegalwaru,
+            KKN UNSIKA 2026 &mdash; Desa Tegalwaru, Kecamatan Tegalwaru,
             Kabupaten Purwakarta
           </p>
           <p className="text-xs text-gray-400">

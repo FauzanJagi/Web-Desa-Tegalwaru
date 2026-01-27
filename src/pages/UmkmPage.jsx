@@ -1,4 +1,4 @@
-import  LoserBeton from "../../public/images/Loser-Beton.jpeg";
+import  LoserBeton from "../../public/images/Loster-Beton.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Umkm() {
@@ -8,7 +8,7 @@ export default function Umkm() {
         {/* Text Content */}
         <div className="flex-1 space-y-6 text-center lg:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-green-800 leading-snug">
-            Roster Beton <span className="text-green-600"></span>
+            Loster Beton <span className="text-green-600"></span>
           </h1>
 
           <p className="text-gray-700 text-base sm:text-lg">
