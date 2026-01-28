@@ -48,7 +48,7 @@ export default function DataDesa() {
           <h2 className="section-title">Data Wilayah</h2>
           <p className="mb-4">
             Desa Tegalwaru memiliki luas wilayah sebesar{" "}
-            <strong>158,566 Ha</strong>.
+            <strong>253 Ha</strong>.
           </p>
 
           <div className="overflow-x-auto">
