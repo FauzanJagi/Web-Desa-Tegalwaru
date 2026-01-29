@@ -49,12 +49,12 @@ export default function TentangDesa() {
                 {[
                   ["1", "Saepudin Madloji", "1980 – 1989"],
                   ["2", "S. Nuhawi", "1990 – 1998"],
-                  ["3", "Cece Khaerudin", "1999 – 2006"],
+                  ["3", "Cecep Khaerudin", "1999 – 2006"],
                   ["4", "H. Ahmad Dimyati", "2007 – 2008"],
                   ["5", "Suhim Setiawan", "2008 – 2014"],
                   ["6", "Tono", "2014 – 2015"],
                   ["7", "Suhim Setiawan", "2015 – 2021"],
-                  ["8", "Cece Ahmad", "Juli – Agustus 2021"],
+                  ["8", "Cecep Ahmad", "Juli – Agustus 2021"],
                   ["9", "Tono", "Agustus – Oktober 2021"],
                   ["10", "Suhim Setiawan", "2021 – 2027"],
                 ].map((row, i) => (
@@ -79,7 +79,7 @@ export default function TentangDesa() {
         data-aos="fade-left"
       >
         <img
-          src="/images/Peta-Desa.png"
+          src="/images/Peta-Desa.jpg"
           alt="Peta Desa Tegalwaru"
           className="w-full max-w-md rounded-lg shadow"
         />
